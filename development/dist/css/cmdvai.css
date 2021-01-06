@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Exo&family=Exo+2&display=swap'); /* Courier and Exo 2*/
+
+/* Basic Initializing  */
+* {
+    padding: 0;   
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+body {
+    height: 100vh;
+    counter-reset: linecount;
+}
+
+.terminal {
+    background-color: rgb(20, 20, 20);
+    margin: 0 6rem;
+    /* margin-left: 6rem;
+    margin-right: 6rem; */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    border-radius: .5rem; 
+    position: relative;
+}
+.terminal-window {
+    height: 25rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    line-height: 2;
+}
+
+.terminal-window::-webkit-scrollbar {
+    display: none;
+}
+
+::selection{
+    background-color: white;
+    color: white;
+}
+tin {
+    color: white;
+    display: block;
+    width: 100%;
+    word-break: break-all;
+    font-family: 'Courier Prime', Courier ,monospace;
+}
+tin::after {
+    counter-increment: linecount;
+    content: counter(linecount);
+    float: right;
+    color: gray;
+}
+tin::before {
+    content: "$ ";
+    color: lightgreen;
+}
+
+tres {
+    display: block;
+    color: gray;
+    position: relative;
+    margin: 0px;
+    text-align: justify;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+}
+tres::before {
+    content: "> ";
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+tres::after {
+    content: "♦";
+    float: right;
+    color: rgb(255, 188, 64);
+    display: inline;
+}
+tres.succ::after {
+    content: "♦";
+    float: right;
+    color: lightgreen;
+}
+tres.err::after {
+    content: "♦";
+    float: right;
+    color: lightcoral;
+}
+#cmd {
+    background-color: rgb(43, 43, 43);
+    border:none;
+    color: white;
+    outline: none;
+    font-size: medium;
+    padding: 16px;
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+a.url {
+    color: lightblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+a.url:visited {
+    color: lightcyan;
+}
+a.url:hover {
+    color: rgb(125, 171, 255);
+}
+
+
+
+/**
+Other Uses
+*/
+
+
+.container {
+
+}
+.header {
+    background: linear-gradient(66.7545078449375deg, rgba(243, 72, 104,1) 1.6093750000000004%,rgba(243, 72, 104,1) 13.459635416666666%,rgba(255, 28, 28,1) 101.40104166666666%);
+    /* background-color: brown; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 9rem;
+
+}
+.title {
+    font-weight: bolder;
+    font-size: 3.7rem;
+    color: white;
+}
+.subtitle {
+    font-weight: lighter;
+    font-size: large;
+    letter-spacing: 2px;
+    color: whitesmoke;
+}
