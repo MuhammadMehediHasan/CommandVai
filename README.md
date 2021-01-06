@@ -5,7 +5,10 @@ star or just comment that you need any update or not :D
 
 
 
-```development
+```text
+
+File Tree
+development
   |
   |- dist
   |   |- js
@@ -13,4 +16,7 @@ star or just comment that you need any update or not :D
   |   |   |- app.js
   |   |- css
   |   |   |- cmdvai.css
-  |- index.html```
+  |- index.html
+  |
+  
+```
